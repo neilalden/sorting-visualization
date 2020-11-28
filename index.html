@@ -5,12 +5,22 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 		<link rel="stylesheet" href="index.css" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+			rel="stylesheet"
+		/>
 		<title>Sorting Visualization!</title>
 	</head>
 	<body>
-		<button id="quickSortBtn">sort!</button>
-		<button id="generateArrayBtn">generate array!</button>
-		<button id="clearBtn">clear</button>
+		<nav>
+			<button id="selectionSortBtn" class="button">
+				Selection <span>Sort!</span>
+			</button>
+			<button id="heapSortBtn" class="button">Heap <span>Sort!</span></button>
+			<button id="quickSortBtn" class="button">Quick <span>Sort!</span></button>
+			<button id="generateArrayBtn" class="button">Generate Array!</button>
+		</nav>
 		<div id="container"></div>
 	</body>
 	<script src="index.js"></script>
