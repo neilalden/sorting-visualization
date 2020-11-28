@@ -1,4 +1,7 @@
-.newContainer {
-	background-color: red;
-	color: red;
+.arrayBar {
+	background-color: aquamarine;
+	margin: 2px;
+	display: inline-block;
+}
+#comtainer {
 }

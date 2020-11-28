@@ -33,9 +33,15 @@ function generateArray() {
 
 function displayArray(CONTAINER, ARRAY) {
 	for (let i = 0; i < ARRAY.length; i++) {
-		CONTAINER.innerHTML += "<div id='" + i + "'>" + ARRAY[i] + "</div>";
+		CONTAINER.innerHTML +=
+			"<div id='" +
+			i +
+			"' class='arrayBar' style='height:" +
+			ARRAY[i] +
+			"px'>" +
+			ARRAY[i] +
+			"</div>";
 	}
-	console.log(ARRAY);
 }
 
 function clearDisplayArray() {
@@ -45,17 +51,32 @@ function clearDisplayArray() {
 	console.log(ARRAY);
 }
 function sort() {
-	var temp = 0;
 	for (let i = 0; i < ARRAY.length; i++) {
 		for (let j = 0; j < ARRAY.length; j++) {
-			if (ARRAY[i] > ARRAY[j]) {
-				temp = ARRAY[i];
-				ARRAY[i] = ARRAY[j];
-				ARRAY[j] = temp;
-			}
+			setTimeout(() => {
+				if (ARRAY[i] > ARRAY[j]) {
+					var temp = ARRAY[i];
+					ARRAY[i] = ARRAY[j];
+					ARRAY[j] = temp;
+					animate(i, j);
+				} else {
+					animate(i, j);
+				}
+			}, i * 1000);
 		}
+	}
+	console.log(ARRAY);
+}
+
+function animate(indexI, indexJ) {
+	const barI = document.getElementById(indexI);
+	barI.style.backgroundColor = "red";
+	const barJ = document.getElementById(indexJ);
+	barJ.style.backgroundColor = "blue";
+	setTimeout(() => {
 		clearDisplayArray();
 		displayArray(CONTAINER, ARRAY);
-	}
+	}, indexI * 3000);
+	console.log(ARRAY[indexI], ARRAY[indexJ]);
 	console.log(ARRAY);
 }
