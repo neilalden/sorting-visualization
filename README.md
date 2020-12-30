@@ -1,2 +1,2 @@
-# sorting_visualization
+# sorting visualization
 <img src="sort.gif"/>
