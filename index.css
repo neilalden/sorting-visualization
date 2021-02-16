@@ -1,0 +1,68 @@
+body {
+	font-size: 10px;
+	background-color: #262626;
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+nav {
+	background-color: transparent;
+	box-shadow: 0 5px 5px 3px #1a1a1a;
+	width: 100vw;
+	height: 35px;
+}
+span {
+	color: #3cb043;
+}
+.button {
+	font-family: "Open Sans", sans-serif;
+	font-size: 3vh;
+	color: aliceblue;
+
+	background-color: transparent;
+	border: none;
+	margin: 0 10px;
+	outline: none;
+	cursor: pointer;
+	transition: 0.3s;
+}
+label {
+	font-family: "Open Sans", sans-serif;
+	font-size: 3vh;
+	color: aliceblue;
+}
+.button:hover {
+	transform: translateY(10px);
+}
+#speedRange {
+	-webkit-appearance: none; /* Override default CSS styles */
+	appearance: none; /* Specified height */
+	background: #1a1a1a; /* Grey background */
+	outline: none; /* Remove outline */
+	-webkit-transition: 0.3s; /* 0.2 seconds transition on hover */
+	transition: opacity 0.3s;
+	color: #3cb043;
+	width: 10vw;
+	height: 2.5vh;
+	border-radius: 5px;
+}
+#speedRange::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	width: 1vw;
+	height: 2vh;
+	background: #3cb043;
+	border-radius: 50%;
+}
+.arrayBar {
+	/* background-color: #3cb043; */
+	background-color: #fff;
+	width: 2px;
+	margin: 0 1px;
+	display: inline-block;
+}
+#container {
+	display: flex;
+	width: 70vw;
+	margin: 0 auto;
+}

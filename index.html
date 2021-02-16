@@ -4,123 +4,27 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<title>Sorting Algorithms Visualizer</title>
+		<link rel="stylesheet" href="index.css" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
 		<link
-			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+			href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
 			rel="stylesheet"
-			integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
-			crossorigin="anonymous"
 		/>
-		<link rel="stylesheet" href="style.css" />
-		<link rel="shortcut icon" href="bar.ico" type="image/x-icon" />
+		<title>Sorting Visualization!</title>
 	</head>
-	<body onload="generateNewArray()" class="bg-dark h-100">
-		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-			<div class="container-fluid">
-				<span class="navbar-brand me-3"
-					><img
-						src="bar.png"
-						alt="icon"
-						height="25px"
-						width="25px"
-						style="transform: translateY(-5px)"
-						class="me-1"
-					/>Sort Visualizer</span
-				>
-				<button
-					class="navbar-toggler"
-					type="button"
-					data-bs-toggle="collapse"
-					data-bs-target="#navbarText"
-					aria-controls="navbarText"
-					aria-expanded="false"
-					aria-label="Toggle navigation"
-				>
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="collapse navbar-collapse" id="navbarText">
-					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-						<li class="nav-item">
-							<button
-								class="btn btn-sm btn-outline-success mx-1"
-								type="button"
-								onclick="animateBubbleSort()"
-							>
-								Bubble Sort
-							</button>
-						</li>
-						<li class="nav-item">
-							<button
-								class="btn btn-sm btn-outline-success mx-1"
-								type="button"
-								onclick="animateQuickSort()"
-								disabled
-							>
-								Quick Sort
-							</button>
-						</li>
-						<li class="nav-item">
-							<button
-								class="btn btn-sm btn-outline-success mx-1"
-								type="button"
-								onclick="animateMergeSort()"
-								disabled
-							>
-								Merge Sort
-							</button>
-						</li>
-						<li class="nav-item">
-							<button
-								class="btn btn-sm btn-outline-success ms-4"
-								type="button"
-								onclick="generateNewArray()"
-							>
-								New Random Array
-							</button>
-						</li>
-					</ul>
-					<form class="d-block">
-						<div class="container-sm">
-							<label for="speed-range" class="form-label text-light"
-								>Speed</label
-							>
-							<input
-								type="range"
-								class="form-range ms-1"
-								value="250"
-								min="1"
-								max="500"
-								style="width: 100px; transform: translateY(7px)"
-								id="speed-range"
-							/>
-						</div>
-						<div class="container-sm">
-							<label for="size-range" class="form-label text-light"
-								>Size &nbsp;&nbsp;&nbsp;
-							</label>
-							<input
-								type="range"
-								class="form-range ms-1"
-								value="10"
-								min="10"
-								max="200"
-								style="width: 100px; transform: translateY(7px)"
-								id="size-range"
-							/>
-						</div>
-					</form>
-				</div>
-			</div>
+	<body>
+		<nav>
+			<button id="selectionSortBtn" class="button">
+				Selection <span>Sort!</span>
+			</button>
+			<button id="bubbleSortBtn" class="button">
+				Bubble <span>Sort!</span>
+			</button>
+			<button id="quickSortBtn" class="button">Quick <span>Sort!</span></button>
+			<button id="generateArrayBtn" class="button">Generate Array!</button>
+			<button id="stop" class="button">stop</button>
 		</nav>
-		<main>
-			<div id="array-container"></div>
-		</main>
+		<div id="container"></div>
 	</body>
-
-	<script src="main.js"></script>
-	<script
-		src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js"
-		integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG"
-		crossorigin="anonymous"
-	></script>
+	<script src="index.js"></script>
 </html>
